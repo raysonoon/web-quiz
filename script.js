@@ -6,15 +6,11 @@ answerContainer.className = "answer-container";
 const bottomContainer = document.querySelector(".bottom-container");
 
 
-document.getElementById("start-btn").addEventListener("click", () => {
-    /*fetch('/getQuestion?session_id=abc123') // Replace with actual session ID
+/*document.getElementById("start-btn").addEventListener("click", () => {
+    fetch('/getQuestion?session_id=abc123') // Replace with actual session ID
         .then(response => response.json())
-        .then(data => displayQuestion(data));*/
-    displayGameHeader();
-    displayQuestion();
-    displayAnswers();
-    displayBottomBar();
-});
+        .then(data => displayQuestion(data));
+}*/
 
 /*function displayQuestion(data) {
     let questionHTML = `
@@ -30,7 +26,7 @@ document.getElementById("start-btn").addEventListener("click", () => {
 }
 */
 
-function displayGameHeader() {
+/*function displayGameHeader() {
     if (studentCounter) {
         headerContainer.removeChild(studentCounter);
     }
@@ -77,6 +73,7 @@ function displayBottomBar() {
     </div>
     `;
 }
+*/
 
 /*function submitAnswer(questionId, selectedOption) {
     fetch('/submitAnswer', {

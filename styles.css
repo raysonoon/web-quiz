@@ -13,17 +13,29 @@
     gap: 5px;
 }
 
-.quiz-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+#start-btn {
+    background-color: gray;
+    color: black;
+    padding: 15px 25px;
+    text-decoration: none;
+  }
+
+#start-btn:hover {
+    background-color: black;
+    color: white;
 }
 
 .quiz-start {
     position: fixed;
     top: 50%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.question-container {
     display: flex;
     flex-direction: column;
     align-items: center;
