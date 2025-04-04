@@ -12,27 +12,17 @@
         <button>Quit</button>
     </div>
 
-    <!-- hard-coded questions -->
-    <div class="question-container">
+    <div class="results-container">
         <h2>1. What am I doing with my life?</h2>
-        <img src ="./img/penguin.jpg" alt="trololol">
-    </div>
-
-    <!-- hard-coded answers -->
-    <div class="answer-container">
-        <button>A. why</button>
-        <button>B. idk</button>
-        <button>C. drop out</button>
-        <button>D. i luv prof wesley</button>
-    </div>
-    
+        <canvas id="bar-chart"></canvas>
+    </div>    
     
     <div class="bottom-bar">
         <h3 id="question-count">1 of 5 Questions</h3>
-        <a id="show-answer-btn" href="./results.html">Show Ans</a>
+        <a id="next-qn-btn" href="./questions.html">Next Qn</a>
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

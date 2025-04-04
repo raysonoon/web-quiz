@@ -1,9 +1,32 @@
-const headerContainer = document.querySelector(".header");
+/*const headerContainer = document.querySelector(".header");
 const studentCounter = document.querySelector(".student-counter");
 const quizContainer = document.querySelector(".quiz-container");
 const answerContainer = document.createElement("div");
 answerContainer.className = "answer-container";
-const bottomContainer = document.querySelector(".bottom-container");
+const bottomContainer = document.querySelector(".bottom-container");*/
+const ctx = document.getElementById('bar-chart').getContext('2d');
+
+// Hard-coded bar graph
+const barChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['A', 'B', 'C', 'D'],
+        datasets: [{
+            data: [5, 4, 3, 2],
+            backgroundColor: ['blue', 'green', 'red', 'orange']
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: { beginAtZero: true }
+        }
+    }
+});
 
 
 /*document.getElementById("start-btn").addEventListener("click", () => {
