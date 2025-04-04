@@ -1,7 +1,9 @@
 const headerContainer = document.querySelector(".header");
 const studentCounter = document.querySelector(".student-counter");
-const quizContainer = document.querySelector("#quiz-container");
-const gameBar = document.createElement("div");
+const quizContainer = document.querySelector(".quiz-container");
+const answerContainer = document.createElement("div");
+answerContainer.className = "answer-container";
+const bottomContainer = document.querySelector(".bottom-container");
 
 
 document.getElementById("start-btn").addEventListener("click", () => {
@@ -10,6 +12,8 @@ document.getElementById("start-btn").addEventListener("click", () => {
         .then(data => displayQuestion(data));*/
     displayGameHeader();
     displayQuestion();
+    displayAnswers();
+    displayBottomBar();
 });
 
 /*function displayQuestion(data) {
@@ -31,14 +35,12 @@ function displayGameHeader() {
         headerContainer.removeChild(studentCounter);
     }
 
-    gameBar.innerHTML = `
+    headerContainer.innerHTML = `
         <div class="game-bar">
             <h2>IM2073 iRA</h2>
             <button>Quit</button>
         </div>
     `;
-
-    headerContainer.appendChild(gameBar);
 }
 
 function displayQuestion() {
@@ -49,7 +51,31 @@ function displayQuestion() {
         </div>
     `;
 
-    document.getElementById("quiz-container").innerHTML = questionHTML;
+    quizContainer.innerHTML = questionHTML;
+}
+
+// Answers hard-coded
+function displayAnswers() {
+    let answerOptionsHTML = `
+        <button>A. why</button>
+        <button>B. idk</button>
+        <button>C. drop out</button>
+        <button>D. i luv prof wesley</button>
+    `;
+
+    answerContainer.innerHTML = answerOptionsHTML;
+
+    quizContainer.appendChild(answerContainer);
+}
+
+// Question count hard-coded
+function displayBottomBar() {
+    bottomContainer.innerHTML = `
+    <div class="bottom-bar"
+    <h3 id="question-count">1 of 5 Questions</h3>
+    <button id="show-answer">Show Ans</button>
+    </div>
+    `;
 }
 
 /*function submitAnswer(questionId, selectedOption) {
