@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .student-counter {
@@ -14,10 +15,11 @@
 }
 
 #start-btn {
-    background-color: gray;
+    background-color: lightgray;
     color: black;
     padding: 15px 25px;
     text-decoration: none;
+    transition-duration: 0.2s;
   }
 
 #start-btn:hover {
@@ -25,20 +27,20 @@
     color: white;
 }
 
-#start-btn {
-    background-color: gray;
+#quit-btn {
+    background-color: lightgray;
     color: black;
     padding: 15px 25px;
     text-decoration: none;
   }
 
-#start-btn:hover {
+#quit-btn:hover {
     background-color: black;
     color: white;
 }
 
 #show-answer-btn {
-    background-color: gray;
+    background-color: lightgray;
     color: black;
     padding: 15px 25px;
     text-decoration: none;
@@ -50,7 +52,7 @@
 }
 
 #next-qn-btn {
-    background-color: gray;
+    background-color: lightgray;
     color: black;
     padding: 15px 25px;
     text-decoration: none;
@@ -63,12 +65,22 @@
 
 .quiz-start {
     position: fixed;
-    top: 50%;
+    top: 45%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+.game-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
 }
 
 .question-container {
@@ -78,10 +90,41 @@
     gap: 20px;
 }
 
-.game-bar {
+#timer {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
     display: flex;
-    justify-content: space-between;
-    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.image-container img {
+    width: 50%;
+}
+
+#answer-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#answer-count > p {
+    font-size: 1.5vw;
+    font-weight: bold;
 }
 
 .question {
@@ -101,9 +144,10 @@
 }
 
 .answer-container > button {
-    background-color: gray;
+    background-color: lightgray;
     color: black;
     border-radius: 8px;
+    padding: 15px;
     font-size: 24px;
     transition-duration: 0.2s;
 }
@@ -126,8 +170,12 @@
 }
 
 .bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
+    margin: 10px 10px;
 }

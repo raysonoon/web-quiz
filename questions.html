@@ -9,13 +9,20 @@
 <body>
     <div class="game-bar">
         <h2>IM2073 iRA</h2>
-        <button>Quit</button>
+        <a id="quit-btn" href="./index.html">Quit</a>
     </div>
 
-    <!-- hard-coded questions -->
+    <!-- hard-coded questions, timer and answer count -->
     <div class="question-container">
         <h2>1. What am I doing with my life?</h2>
-        <img src ="./img/penguin.jpg" alt="trololol">
+        <div class="image-container">
+            <div id="timer">15</div>
+            <img src ="./img/penguin.jpg" alt="trololol">
+            <div id="answer-count">
+                <p>5</p>
+                <p>answered</p>
+            </div>
+        </div>
     </div>
 
     <!-- hard-coded answers -->
@@ -32,7 +39,10 @@
         <a id="show-answer-btn" href="./results.html">Show Ans</a>
     </div>
 
-
     <script src="script.js"></script>
+    <script>
+        // to start countdown when question loads
+        startCountdown();
+    </script>
 </body>
 </html>
