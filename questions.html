@@ -12,6 +12,11 @@
         <a id="quit-btn" href="./index.html">Quit</a>
     </div>
 
+    <!-- question bar shows progress coded in questions.js-->
+    <div class="question-bar">
+        <div class="question-bar-fill"></div>
+    </div>
+
     <!-- hard-coded questions, timer and answer count -->
     <div class="question-container">
         <h2>1. What am I doing with my life?</h2>
@@ -39,10 +44,12 @@
         <a id="show-answer-btn" href="./results.html">Show Ans</a>
     </div>
 
-    <script src="script.js"></script>
+    <script src="questions.js"></script>
     <script>
-        // to start countdown when question loads
+        // hard-coded; to check if question has loaded and then start countdown
         startCountdown();
+        // hard-coded; to request question number from server
+        updateQuestionBar(1, 5);
     </script>
 </body>
 </html>
