@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>IM2073 iRA: Start</title>
 </head>
+
 <body>
     <div class="game-bar">
         <h2>IM2073 iRA</h2>
@@ -15,14 +17,23 @@
     <div class="results-container">
         <h2>1. What am I doing with my life?</h2>
         <canvas id="bar-chart"></canvas>
-    </div>    
-    
+    </div>
+
+    <!-- hard-coded answer results; to render in js and add classes -->
+    <div class="answer-container">
+        <button class="correct">A. why</button>
+        <button class="wrong">B. idk</button>
+        <button class="wrong">C. drop out</button>
+        <button class="wrong">D. i luv prof wesley</button>
+    </div>
+
     <div class="bottom-bar">
         <h3 id="question-count">1 of 5 Questions</h3>
         <a id="next-qn-btn" href="./questions.html">Next Qn</a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="chart.js"></script>
+    <script src="results.js"></script>
 </body>
+
 </html>

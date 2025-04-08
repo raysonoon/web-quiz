@@ -1,5 +1,6 @@
 
 const ctx = document.getElementById('bar-chart').getContext('2d');
+const answerContainer = document.querySelector(".answer-container");
 
 // Hard-coded bar graph
 const barChart = new Chart(ctx, {
@@ -38,3 +39,10 @@ function startCountdown() {
         }
     }, 1000);
 }
+
+// Disable buttons to prevent re-clicking
+// need to index button to check with data
+[...answerContainer.children].forEach((btn) => {
+    console.log("i found the button!");
+    //btn.disabled = true;
+});
